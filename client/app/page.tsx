@@ -369,7 +369,6 @@ export default function SkillPulse() {
                 Profile Analysis
               </h2>
 
-              // ...existing code...
 <div className="grid md:grid-cols-2 gap-6">
   {/* Personal Information */}
   <div className="space-y-4 text-gray-800 font-sans">
