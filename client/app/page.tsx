@@ -217,16 +217,16 @@ export default function SkillPulse() {
         <nav className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex space-x-8">
-              {[
+              {([
                 { id: 'analysis', label: 'Profile Analysis', icon: User },
                 { id: 'recommendations', label: 'Career Matches', icon: Target },
                 { id: 'learning', label: 'Learning Path', icon: BookOpen },
-              ].map((tab) => {
+              ] as { id: 'analysis' | 'recommendations' | 'learning', label: string, icon: typeof User }[]).map((tab) => {
                 const Icon = tab.icon
                 return (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center space-x-2 py-4 border-b-2 transition-colors duration-200 ${
                       activeTab === tab.id
                         ? 'border-blue-500 text-blue-600'
