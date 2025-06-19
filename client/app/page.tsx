@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from 'react'
-import { Upload, FileText, Brain, Target, TrendingUp, Award, BookOpen, Zap, User, Mail, Phone, Calendar, MapPin } from 'lucide-react'
+import { Upload, Brain, Target, TrendingUp, Award, BookOpen, Zap, User, Mail, Phone, Calendar, MapPin } from 'lucide-react'
 
 interface PersonalInfo {
   name?: string
@@ -145,9 +145,10 @@ export default function SkillPulse() {
       const data = await response.json()
       setAnalysis(data)
       setActiveTab('analysis')
-    } catch (err: any) {
-      console.error("Analysis failed:", err)
-      setError(err.message || "Failed to analyze resume. Please try again.")
+    } catch (err: unknown) {
+  const errorMessage = err instanceof Error ? err.message : "Something went wrong"
+  console.error("Analysis failed:", errorMessage)
+  setError(errorMessage)
     } finally {
       setLoading(false)
     }
