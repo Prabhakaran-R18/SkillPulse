@@ -369,38 +369,38 @@ export default function SkillPulse() {
                 Profile Analysis
               </h2>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Personal Information */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-gray-800">Personal Information</h3>
-                  <div className="space-y-2">
-                    {analysis.profile_analysis.personal_info.name && (
-                      <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4 text-gray-500" />
-                        <span>{analysis.profile_analysis.personal_info.name}</span>
-                      </div>
-                    )}
-                    {analysis.profile_analysis.personal_info.email && (
-                      <div className="flex items-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-500" />
-                        <span>{analysis.profile_analysis.personal_info.email}</span>
-                      </div>
-                    )}
-                    {analysis.profile_analysis.personal_info.phone && (
-                      <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 text-gray-500" />
-                        <span>{analysis.profile_analysis.personal_info.phone}</span>
-                      </div>
-                    )}
-                    {analysis.profile_analysis.personal_info.location && (
-                      <div className="flex items-center space-x-2">
-                        <MapPin className="w-4 h-4 text-gray-500" />
-                        <span>{analysis.profile_analysis.personal_info.location}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
+              // ...existing code...
+<div className="grid md:grid-cols-2 gap-6">
+  {/* Personal Information */}
+  <div className="space-y-4 text-gray-800 font-sans">
+    <h3 className="text-lg font-semibold text-gray-800">Personal Information</h3>
+    <div className="space-y-2">
+      {analysis.profile_analysis.personal_info.name && (
+        <div className="flex items-center space-x-2">
+          <User className="w-4 h-4 text-gray-500" />
+          <span>{analysis.profile_analysis.personal_info.name}</span>
+        </div>
+      )}
+      {analysis.profile_analysis.personal_info.email && (
+        <div className="flex items-center space-x-2">
+          <Mail className="w-4 h-4 text-gray-500" />
+          <span>{analysis.profile_analysis.personal_info.email}</span>
+        </div>
+      )}
+      {analysis.profile_analysis.personal_info.phone && (
+        <div className="flex items-center space-x-2">
+          <Phone className="w-4 h-4 text-gray-500" />
+          <span>{analysis.profile_analysis.personal_info.phone}</span>
+        </div>
+      )}
+      {analysis.profile_analysis.personal_info.location && (
+        <div className="flex items-center space-x-2">
+          <MapPin className="w-4 h-4 text-gray-500" />
+          <span>{analysis.profile_analysis.personal_info.location}</span>
+        </div>
+      )}
+    </div>
+  </div>
                 {/* Experience Level */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-gray-800">Experience Level</h3>
